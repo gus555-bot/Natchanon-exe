@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<title>แนะนำอาหาร - ท่องเที่ยวโคราช</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b8fdd6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #4caf50;
+  color: black;
+}
+
+/* Slideshow Banner สำหรับภาพอาหารด้านบน */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  max-height: 380px;
+  background-color: #000;
+}
+
+.mySlides {
+  display: none;
+  position: relative;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+/* ข้อความบรรยายบนภาพสไลด์ */
+.slide-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Container หลัก */
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* ปุ่มกรองหมวดหมู่ */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* Food Grid Layout */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.food-card {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.food-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.food-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-tag {
+  display: inline-block;
+  background-color: #e8f8f5;
+  color: #2e7d32;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.food-content h3 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.food-content p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.food-location {
+  font-size: 13px;
+  color: #d9534f;
+  font-weight: bold;
+  background: #fdf2f2;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  color: white;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<!-- Slideshow แบนเนอร์ภาพอาหารเลื่อนสไลด์อัตโนมัติ -->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="ผัดหมี่โคราช.jpg" alt="ผัดหมี่โคราช">
+    <div class="slide-text">🍽️ ผัดหมี่โคราช เมนูเด็ดต้องลอง</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="ส้มตำโคราช.jpg" alt="ส้มตำโคราช">
+    <div class="slide-text">🥗 ส้มตำโคราช รสแซ่บจัดจ้าน</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="ไส้กรอกอีสาน.jpg" alt="ของกินโคราช">
+    <div class="slide-text">🍢 ของว่างและของฝากขึ้นชื่อ</div>
+  </div>
+</div>
+
+<!-- Navigation Bar (เปลี่ยนเป็นภาษาไทยทั้งหมด) -->
+<div class="navbar">
+  <a href="website.html">หน้าแรก</a>
+  <a href="teepak.html.html">ที่พัก</a>
+  <a href="Food.html" style="background-color: #4caf50; color: black;">อาหาร</a>
+  <a href="travel.html">สถานที่ท่องเที่ยว</a>
+  <a href="contact.html">ติดต่อเรา</a>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+  <h2>เมนูเด็ด และของกินโคราช</h2>
+  <p class="subtitle">รวมพิกัดความอร่อย อาหารพื้นถิ่น และของฝากขึ้นชื่อเมืองย่าโม</p>
+  
+  <!-- ปุ่มกรองหมวดหมู่ -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" onclick="filterSelection('all', event)">ทั้งหมด</button>
+    <button class="filter-btn" onclick="filterSelection('main', event)">อาหารคาว/เส้น</button>
+    <button class="filter-btn" onclick="filterSelection('souvenir', event)">ของฝาก/ของว่าง</button>
+  </div>
+
+  <!-- รายการการ์ดอาหาร -->
+  <div class="food-grid">
+    
+    <!-- การ์ดที่ 1 -->
+    <div class="food-card" data-category="main">
+      <img src="ผัดหมี่โคราช.jpg" class="food-img" alt="ผัดหมี่โคราช">
+      <div class="food-content">
+        <span class="food-tag">เมนูซิกเนเจอร์</span>
+        <h3>ผัดหมี่โคราช</h3>
+        <p>เส้นหมี่เหนียวนุ่ม ผัดคลุกเคล้าซอสสูตรโบราณ หอมกลิ่นกระทะและพริกไทยดำ รสชาติกลมกล่อม</p>
+        <div class="food-location">📍 ร้านแนะนำ: ยายป้อมหมี่โคราช</div>
+      </div>
+    </div>
+
+    <!-- การ์ดที่ 2 -->
+    <div class="food-card" data-category="main">
+      <img src="ส้มตำโคราช.jpg" class="food-img" alt="ส้มตำโคราช">
+      <div class="food-content">
+        <span class="food-tag">อาหารอีสานรสแซ่บ</span>
+        <h3>ส้มตำโคราช</h3>
+        <p>ส้มตำรสชาติกลมกล่อม เอกลักษณ์คือใส่ปลาร้าต้มสุก กุ้งแห้ง และถั่วลิสง คลุกเคล้าจนเข้ากันลงตัว</p>
+        <div class="food-location">📍 พิกัด: ตลาดไนท์บาร์ซ่า / ร้านส้มตำทั่วเมือง</div>
+      </div>
+    </div>
+
+    <!-- การ์ดที่ 3 -->
+    <div class="food-card" data-category="souvenir">
+      <img src="ไส้กรอกอีสาน.jpg" class="food-img" alt="ไส้กรอกอีสาน">
+      <div class="food-content">
+        <span class="food-tag">ของฝาก / ของว่าง</span>
+        <h3>ไส้กรอกอีสานย่าง</h3>
+        <p>ไส้กรอกหมูผสมข้าวหมักจนเปรี้ยวกำลังดี ย่างจนหนังกรอบ ทานคู่ขิงดอง พริกสด และกะหล่ำปลี</p>
+        <div class="food-location">📍 พิกัด: ตลาดเซฟวัน โคราช</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>เว็บไซต์แนะนำการท่องเที่ยวโคราช © 2026</p>
+</footer>
+
+<!-- JavaScript สำหรับสไลด์ภาพและระบบกรอง -->
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3500); 
+}
+
+function filterSelection(c, event) {
+  let cards = document.getElementsByClassName("food-card");
+  let buttons = document.getElementsByClassName("filter-btn");
+
+  for (let btn of buttons) {
+    btn.classList.remove("active");
+  }
+  event.target.classList.add("active");
+
+  for (let card of cards) {
+    if (c == "all" || card.getAttribute("data-category") == c) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

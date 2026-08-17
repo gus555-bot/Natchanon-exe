@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<title>สถานที่ท่องเที่ยวอื่นๆ - ท่องเที่ยวโคราช</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b8fdd6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #4caf50;
+  color: black;
+}
+
+/* Slideshow Banner สำหรับภาพท่องเที่ยวเลื่อนอัตโนมัติ */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  max-height: 380px;
+  background-color: #000;
+}
+
+.mySlides {
+  display: none;
+  position: relative;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+/* ข้อความบรรยายบนภาพสไลด์ */
+.slide-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 10px;
+}
+
+/* Image Grid Layout */
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.travel-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.travel-img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.travel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.travel-item:hover img {
+  transform: scale(1.05);
+}
+
+.travel-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.travel-item p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.travel-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  color: white;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<!-- Slideshow แบนเนอร์ภาพท่องเที่ยวเลื่อนสไลด์อัตโนมัติ -->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="slide_.jpg" alt="แบนเนอร์สถานที่ท่องเที่ยว 1">
+    <div class="slide-text">🏞️ สัมผัสธรรมชาติและสถานที่ท่องเที่ยวโคราช</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="สวยนสัตร์โคราช.jpg" alt="สวนสัตว์นครราชสีมา">
+    <div class="slide-text">🦒 สวนสัตว์นครราชสีมา</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="วัด.jpg" alt="วัดศาลาลอย">
+    <div class="slide-text">🛕 วัดศาลาลอย</div>
+  </div>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="website.html">หน้าแรก</a>
+  <a href="teepak.html.html">แนะนำที่พัก</a>
+  <a href="Food.html">อาหาร</a>
+  <a href="travel.html" style="background-color: #4caf50; color: black;">สถานที่ท่องเที่ยว</a>
+  <a href="contact.html">ติดต่อเรา</a>
+</div>
+a
+<!-- Main Content -->
+<div class="container">
+  <h2>สถานที่ท่องเที่ยวอื่นๆ ในโคราช</h2>
+  
+  <div class="travel-grid">
+    <!-- สถานที่ 1 -->
+    <div class="travel-item">
+      <div class="travel-img-container">
+        <img src="สวยนสัตร์โคราช.jpg" alt="สวนสัตว์นครราชสีมา">
+      </div>
+      <div class="travel-content">
+        <p>สวนสัตว์นครราชสีมา</p>
+        <span class="travel-desc">ชมความน่ารักของสัตว์ป่า นานาชนิด และส่วนจัดแสดงซาฟารีเปิดโล่ง</span>
+      </div>
+    </div>
+
+    <!-- สถานที่ 2 -->
+    <div class="travel-item">
+      <div class="travel-img-container">
+        <img src="วัด.jpg" alt="วัดศาลาลอย">
+      </div>
+      <div class="travel-content">
+        <p>วัดศาลาลอย</p>
+        <span class="travel-desc">วัดโบราณที่ท้าวสุรนารีและคุณย่าโมสร้างขึ้น โดดเด่นด้วยสถาปัตยกรรมเรือสำราญ</span>
+      </div>
+    </div>
+
+    <!-- สถานที่ 3 -->
+    <div class="travel-item">
+      <div class="travel-img-container">
+        <img src="เขื่อน.jpg" alt="จุดชมวิวเขื่อนลำตะคอง">
+      </div>
+      <div class="travel-content">
+        <p>จุดชมวิวเขื่อนลำตะคอง</p>
+        <span class="travel-desc">จุดพักรถและชมวิวมุมสูงของอ่างเก็บน้ำเขื่อนลำตะคองที่สวยงามร่มรื่น</span>
+      </div>
+    </div>
+
+    <!-- สถานที่ 4 (เพิ่มใหม่) -->
+    <div class="travel-item">
+      <div class="travel-img-container">
+        <img src="sss.jpg" alt="อนุสาวรีย์ท้าวสุรนารี">
+      </div>
+      <div class="travel-content">
+        <p>อนุสาวรีย์ท้าวสุรนารี (คุณย่าโม)</p>
+        <span class="travel-desc">ศูนย์รวมจิตใจของชาวโคราช สักการะขอพรเพื่อความเป็นสิริมงคล</span>
+      </div>
+    </div>
+
+    <!-- สถานที่ 5 (เพิ่มใหม่) -->
+    <div class="travel-item">
+      <div class="travel-img-container">
+        <img src="รูปอุทยานแห่งชาติเขาใหญ่.jpg" alt="อุทยานแห่งชาติเขาใหญ่">
+      </div>
+      <div class="travel-content">
+        <p>อุทยานแห่งชาติเขาใหญ่</p>
+        <span class="travel-desc">มรดกโลกทางธรรมชาติ อากาศบริสุทธิ์ ป่าไม้เขียวขจี น้ำตก และสัตว์ป่าอุดมสมบูรณ์</span>
+      </div>
+    </div>
+
+    <!-- สถานที่ 6 (เพิ่มใหม่) -->
+    <div class="travel-item">
+      <div class="travel-img-container">
+        <img src="ไม้.jpg" alt="พิพิธภัณฑสถานแห่งชาติ มหาราช">
+      </div>
+      <div class="travel-content">
+        <p>พิพิธภัณฑ์ไม้กระายเป็นหิน</p>
+        <span class="travel-desc">แหล่งเรียนรู้ทางธรณีวิทยา ซากดึกดำบรรพ์ไม้กลายเป็นหินอายุหลายล้านปี</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>เว็บไซต์แนะนำการท่องเที่ยวโคราช © 2026</p>
+</footer>
+
+<!-- JavaScript สำหรับสไลด์ภาพแบนเนอร์อัตโนมัติ -->
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3500); 
+}
+</script>
+
+</body>
+</html>

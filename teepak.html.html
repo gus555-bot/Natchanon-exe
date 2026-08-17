@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<title>แนะนำที่พัก - ท่องเที่ยวโคราช</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b8fdd6;
+  color: #333;
+}
+
+/* Navbar (สีโทนเดิม #333 และ Hover #4caf50) */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #4caf50;
+  color: black;
+}
+
+/* Header Banner */
+header img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* Layout Container */
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Sidebar */
+.side {
+  flex: 30%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Main Content */
+.main {
+  flex: 68%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Section Headings */
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 8px;
+}
+
+/* Hotel Card Design */
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+.hotel-info {
+  padding: 15px;
+}
+
+.hotel-info h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.hotel-tag {
+  display: inline-block;
+  background-color: #e8f8f5;
+  color: #2e7d32;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hotel-info p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.btn-detail {
+  display: inline-block;
+  background-color: #4caf50;
+  color: black;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-detail:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+/* Footer (สีโทนเดิม #333) */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .side, .main {
+    flex: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header Banner -->
+<header>
+  <img src="ssasaf.png" alt="แบนเนอร์แนะนำที่พักโคราช" width="100%">
+</header>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="website.html">หน้าแรก</a>
+  <a href="teepak.html.html" style="background-color: #4caf50; color: black;">แนะนำที่พัก</a>
+  <a href="Food.html">อาหาร</a>
+  <a href="travel.html">สถานที่ท่องเที่ยว</a>
+  <a href="Contact.html">ติดต่อเรา</a>
+</div>
+
+<!-- Content Container -->
+<div class="container">
+  
+  <!-- Sidebar: แนะนำพิเศษ / โซนเขาใหญ่ -->
+  <div class="side">
+    <h2>ที่พักยอดฮิต</h2>
+    <p>สัมผัสบรรยากาศธรรมชาติ ขุนเขา และสายหมอกในโซนเขาใหญ่</p>
+    <br>
+    <div class="hotel-card">
+      <img src="ที่พัก.jpg" class="hotel-img" alt="ภาพที่พักเขาใหญ่">
+      <div class="hotel-info">
+        <span class="hotel-tag">โซนเขาใหญ่ - ธรรมชาติ</span>
+        <h3>Khaoyai Nature Hill Resort</h3>
+        <p>ที่พักสไตล์รีสอร์ทท่ามกลางขุนเขา เหมาะสำหรับคนรักธรรมชาติ ตื่นมาเจอหมอกยามเช้า</p>
+        <a href="Khaoyai Nature Hill.html" class="btn-detail">ดูรายละเอียด</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content: โรงแรมในตัวเมืองและโซนอื่นๆ -->
+  <div class="main">
+    <h2>โรงแรมและรีสอร์ทแนะนำในโคราช</h2>
+    <p style="margin-bottom: 20px; color: #666;">รวบรวมที่พักคุณภาพดี เดินทางสะดวก ใกล้แหล่งท่องเที่ยวสำคัญ</p>
+
+    <!-- ที่พักแห่งที่ 1 -->
+    <div class="hotel-card">
+      <img src="โรงแรม.jpg" class="hotel-img" alt="ภาพโรงแรมในเมือง">
+      <div class="hotel-info">
+        <span class="hotel-tag">โซนตัวเมือง - ใกล้ย่าโม</span>
+        <h3>Korat City Grand Hotel</h3>
+        <p>โรงแรมหรูใจกลางเมืองนครราชสีมา สะดวกสบาย ใกล้แหล่งของกินและอนุสาวรีย์ท้าวสุรนารี พร้อมสิ่งอำนวยความสะดวกครบครัน</p>
+        <a href="Korat City Grand Hotel.html" class="btn-detail">ดูรายละเอียด</a>
+      </div>
+    </div>
+
+    <!-- ที่พักแห่งที่ 2 -->
+    <div class="hotel-card">
+      <img src="พักที่2.jpg" class="hotel-img" alt="ภาพรีสอร์ทโมเดิร์น">
+      <div class="hotel-info">
+        <span class="hotel-tag">โซนปากช่อง - พูลวิลล่า</span>
+        <h3>The Green Valley Khaoyai</h3>
+        <p>บ้านพักพูลวิลล่าส่วนตัว ดีไซน์ทันสมัย เหมาะสำหรับมาพักผ่อนเป็นกลุ่มเพื่อนหรือครอบครัว พร้อมปิ้งย่างบาบีคิว</p>
+        <a href="The Green Valley Khaoyai.html" class="btn-detail">ดูรายละเอียด</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <p>เว็บไซต์แนะนำการท่องเที่ยวโคราช © 2026</p>
+</footer>
+
+</body>
+</html>

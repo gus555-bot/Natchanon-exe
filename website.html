@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+
+<title>เที่ยวโคราช - Nakhon Ratchasima Travel</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #024911;
+  color: #333;
+}
+
+
+
+
+
+
+
+/* Top navigation bar */
+
+.navbar {
+
+  display: flex;
+
+  background-color: #333;
+
+}
+
+
+
+/* Navigation bar links */
+
+.navbar a {
+
+  color: #fffefe;
+
+  padding: 14px 20px;
+
+  text-decoration: none;
+
+  text-align: center;
+
+}
+
+
+
+/* Change color on hover */
+
+.navbar a:hover {
+
+  background-color: #4caf50;
+
+  color: black;
+
+}
+
+
+
+/* Column container */
+
+.container {  
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+/* Sidebar/left column */
+
+.side {
+
+  flex: 30%;
+
+  background-color: #b8fdd6;
+
+  padding: 20px;
+
+}
+
+
+
+/* Main column */
+
+.main {
+
+  flex: 70%;
+
+  background-color: #b8fdd6;
+
+  padding: 20px;
+
+}
+
+
+
+/* Fake image, just for this example */
+
+.fakeimg {
+
+  background-color: #aaa;
+
+  width: 100%;
+
+  padding: 20px;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+ padding: 20px;
+
+  text-align: center;
+
+  background: #333;
+
+  color: white
+
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+
+  .container, .navbar {  
+
+    flex-direction: column;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+<!-- Header -->
+<style>
+  header img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+</style>
+
+<header>
+  <img src="ssasaf.png" alt="แบนเนอร์แนะนำที่พักโคราช" width="100%">
+</header>
+
+<!-- Navigation Bar -->
+
+<div class="navbar">
+
+  <a href="website.html">หน้าแรก</a>
+
+  <a href="teepak.html.html">แนะนำที่พัก</a>
+
+  <a href="Food.html">อาหาร</a>
+
+  <a href="travel.html">สถานที่ท่องเที่ยว</a>
+
+  <a href="Contact.html">ติดต่อเรา</a>
+
+</div>
+
+<!-- Content Container -->
+
+<div class="container">
+
+  <div class="side">
+
+    <h2>อุทยานแห่งชาติเขาใหญ่</h2>
+
+    <h5>รูปอุทยานแห่งชาติเขาใหญ่:</h5>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 15px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  /* --- ส่วนที่เพิ่มเข้ามา --- */
+  border: 5px solid #008a12;   /* สีขาวหรือเปลี่ยนเป็นสีอื่นได้ */
+  border-radius: 8px;         /* ความมนของมุมกรอบ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้รูปดูมีมิติ */
+  /* ---------------------- */
+
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+/* Modal content (image) */
+.modal-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: zoomIn 0.5s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Caption of modal image */
+.caption {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-item {
+     width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-item  {
+    width: calc(100% - 20px);
+  }
+}
+</style>
+</head>
+<body>
+
+
+    
+<div class="gallery">
+  <img src="slide_.jpg" alt="Cinque Terre" class="gallery-item" onclick="openModal('modal1', '')" width="600" height="400">
+  
+</div>
+
+<div id="modal1" class="modal">
+  <span class="close" onclick="closeModal('modal1')">&times;</span>
+  <img src="slide_.jpg" alt="Cinque Terre" class="modal-content" width="600" height="400">
+  <div class="caption"></div>
+</div>
+
+<script>
+function openModal(modalId, caption) {
+  let modal = document.getElementById(modalId);
+  modal.style.display = "flex";
+  modal.classList.add("show");
+  let message = modal.querySelector(".caption");
+  message.innerText = caption;
+}
+
+function closeModal(modalId) {
+  let modal = document.getElementById(modalId);
+  modal.classList.remove("show");
+  setTimeout(function () {
+    modal.style.display = "none";
+    modal.querySelector(".caption").innerText = "";
+  }, 300);
+}
+</script>
+</body>
+</html>
+
+    <p>อุทยานแห่งชาติเขาใหญ่ เป็นอุทยานแห่งชาติแห่งแรกของประเทศไทย ก่อตั้งเมื่อวันที่ 18 กันยายน พ.ศ. 2505</p>
+<h3>สัตว์ภายในอุทยานแห่งชาติเขาใหญ่ สามารถกดรับชมวีดีโอของสัตว์ได้</h3>
+    <details class="video-box">
+  <summary>
+    <img src="ช้าง.jpg" style="width:300px; cursor:pointer;" alt="คลิกเพื่อดูวิดีโอช้าง">
+  </summary>
+  
+  <video width="200" controls>
+    <source src="112696-695433068_medium.mp4" type="video/mp4">
+    เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+  </video>
+</details>
+
+<style>
+  /* ลบเครื่องหมายลูกศรหน้ากล่องออก */
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  
+  .video-box {
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+    <details class="video-box">
+  <summary>
+    <img src="กวาง.jpg" style="width:300px; cursor:pointer;" alt="คลิกเพื่อดูวิดีโอช้าง">
+  </summary>
+  
+  <video width="200" controls>
+    <source src="กลวง_medium.mp4" type="video/mp4">
+    เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+  </video>
+</details>
+
+<style>
+  /* ลบเครื่องหมายลูกศรหน้ากล่องออก */
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  
+  .video-box {
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+        <details class="video-box">
+  <summary>
+    <img src="ลิง.jpg" style="width:300px; cursor:pointer;" alt="คลิกเพื่อดูวิดีโอช้าง">
+  </summary>
+  
+  <video width="200" controls>
+    <source src="ลิง_medium.mp4" type="video/mp4">
+    เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+  </video>
+</details>
+
+<style>
+  /* ลบเครื่องหมายลูกศรหน้ากล่องออก */
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  
+  .video-box {
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+  </div>
+
+
+  <div class="main">
+
+    <h2>ปราสาทหินพิมาย</h2>
+
+    <h5>มรดกทางวัฒนธรรมที่ล้ำค่า, 29 มิ.ย. 2026</h5>
+
+   <div class="box" style="height:250px;"><img src="หินพิมาย.png"width="600" height="250  "></div>
+
+    <p>ประวัติศาสตร์</p>
+
+    <p>ปราสาทหินพิมาย เป็นโบราณสถานสำคัญของประเทศไทย ตั้งอยู่ในอำเภอพิมาย จังหวัดนครราชสีมา สร้างขึ้นในราวพุทธศตวรรษที่ 16–18 ในสมัยอาณาจักรขอม มีลักษณะเป็นสถาปัตยกรรมแบบขอมที่มีขนาดใหญ่และงดงามที่สุดแห่งหนึ่งในประเทศไทย เดิมสร้างขึ้นเพื่อใช้เป็นศาสนสถานในศาสนาพุทธนิกายมหายาน ก่อนที่จะได้รับอิทธิพลของศาสนาฮินดูในเวลาต่อมา</p>
+
+    <br>
+
+    <h2>ท้าวสุรนารี หรือ ย่าโม </h2>
+
+    <h5>ป็นวีรสตรีไทยผู้กอบกู้นครราชสีมา ในปี พ.ศ. 2369</h5>
+
+    <div class="box" style="height:250px;"><img src="sss.jpg"width="230" height="250"><img src="ย่าโม.jpg" width="230" height="250"></div>
+
+    <p>ประวัติศาสตร์ ย่าโม</p>
+
+    <p>เป็นวีรสตรีไทยผู้กอบกู้นครราชสีมา ในปี พ.ศ. 2369 เจ้าอนุวงศ์แห่งเวียงจันทน์ยกทัพมายึดเมือง ย่าโมได้ใช้กลลวงเลี้ยงสุราทหารลาวจนเมามาย แล้วนำชาวเมืองเข้าโจมตีขับไล่จนสำเร็จ ร.3 จึงโปรดเกล้าฯ แต่งตั้งเป็น "ท้าวสุรนารี"</p>
+
+  </div>
+
+</div>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+  <p>เว็บไซต์แนะนำการท่องเที่ยวโคราช © 2026</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
